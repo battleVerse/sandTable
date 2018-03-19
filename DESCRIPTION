@@ -1,0 +1,27 @@
+Package: sandTable
+Type: Package
+Title: Data visualization and data import/export for the battleVerse
+Version: 0.3
+Date: 2018-03-19
+Authors@R: c(
+  person('Benjamin','Ashwell',email='bashwell@ida.org',role=c('cre','aut')),
+  person('Kevin','Kirshenbaum',email='kkirshen@ida.org',role=c('aut'))
+  )
+Description: sandTable is designed to help users with processing weapon engagement data.  
+    This includes plotting functions as well as import/export of SIMDIS format data
+License: GPL-3
+Copyright: Institute for Defense Analyses
+Depends:
+    R (>= 3.0.2),
+    dplyr (>= 0.7)
+Imports:
+    plotly,
+    ggplot2,
+    shiny,
+    miniUI,
+    purrrlyr,
+    rhandsontable,
+    scenarioMaker (>= 0.2)
+RoxygenNote: 6.0.1
+Encoding: UTF-8
+LazyData: true

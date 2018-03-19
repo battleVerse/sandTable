@@ -2,4 +2,8 @@
 Extended visualization options and import/export for battleVerse
 
 
-First test upload sandTable
+This package requires scenarioMaker (https://github.com/battleVerse)
+
+More detail coming soon.
+
+Copyright: Institute for Defense Analyses, 2018

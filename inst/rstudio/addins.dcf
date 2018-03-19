@@ -1,0 +1,4 @@
+Name: sandTableGUI
+Description: Graphical interface for sandTable
+Binding: sandTable_interface
+Interactive: true
