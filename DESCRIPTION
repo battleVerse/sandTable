@@ -7,8 +7,7 @@ Authors@R: c(
   person('Benjamin','Ashwell',email='bashwell@ida.org',role=c('cre','aut')),
   person('Kevin','Kirshenbaum',email='kkirshen@ida.org',role=c('aut'))
   )
-Description: sandTable is designed to help users with processing weapon engagement data.  
-    This includes plotting functions as well as import/export of SIMDIS format data
+Description: sandTable is designed to help users with processing weapon engagement data. This includes plotting functions as well as import/export of SIMDIS format data.
 License: GPL-3
 Copyright: Institute for Defense Analyses
 Depends:
@@ -19,6 +18,7 @@ Imports:
     ggplot2,
     shiny,
     miniUI,
+    stringr,
     purrrlyr,
     rhandsontable,
     scenarioMaker (>= 0.2)

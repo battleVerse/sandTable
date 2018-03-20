@@ -152,7 +152,7 @@ sandTable_interface = function() {
         saveEngagementData = eventReactive(input$saveEngagements, {
             req(is.list(values$scenario))
             cat("Saving Changes to Scenario\n")
-            engagementData=hot_to_r(input$engagementTable)
+            engagementData=rhandsontable::hot_to_r(input$engagementTable)
             values$scenario$engagementData=engagementData
             assign(as.character(input$scenario),values$scenario,envir=.GlobalEnv)
         })

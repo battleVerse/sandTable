@@ -24,7 +24,7 @@
 #'  \item{trackColor: (string) color of the track (must be a valid SIMDIS choice)}
 #'  }
 #'
-#'  @param persistPosition (boolean) if true, will persist all platforms until this time (and gray out the title at their last position) (default=false)
+#' @param persistPosition (boolean) if true, will persist all platforms until this time (and gray out the title at their last position) (default=false)
 #' @param drawSensorTracks (default=FALSE) if the scenario includes sensorData, the tracks will be drawn in the asi file (it's okay if drawSensorTracks=TRUE but no sensorData exists in the scenario)
 #' @return text
 #'

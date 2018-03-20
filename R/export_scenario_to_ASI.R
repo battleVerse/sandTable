@@ -1,13 +1,13 @@
 #' @title Writes your scenario as an ASI file
 #'
-#' @description
+#' @description Exports a scenario to a .asi file, which can be opened with SIMDIS for event visualization
 #'
 #' @param scenario must have targetTruth and/or ownShipTruth as well as platformInfo
 #' @param outFileName output file name (including path if desired) for the ASI. Optional to include '.asi' in the output
 #' @param drawEngagements (default=TRUE) if the scenario includes engagementData, the engagements will be drawn in the asi file (it's okay if drawEngagements=TRUE but no engagementData exists in the scenario)
 #' @param drawSensorTracks (default=FALSE) if the scenario includes sensorData, the tracks will be drawn in the asi file (it's okay if drawSensorTracks=TRUE but no sensorData exists in the scenario)
 #' @param persistPosition (boolean) if true, will persist all platforms until the end of the file (and gray out the title at their last position) (default=false)
-#' @param prefFile (default=NA) specify name of preference file (must be in same folder as the ASI output when you open it in simdis)
+#' @param prefFile (default=NA) specify name of preference file (must be in same folder as the ASI output when you open it in SIMDIS)
 #'
 #'
 #' @export

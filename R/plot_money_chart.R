@@ -94,7 +94,7 @@ plot_money_chart = function(scenario){
     maxRange=round(max(updatedEngagements$slantRange) + 500, digits=-3) #add 1000 and round to the nearest 1000
 
     #create a match between weapon name and color
-    colorNameMatch=setNames(unique(as.character(updatedEngagements$color)),unique(as.character(updatedEngagements$weapon)))
+    colorNameMatch=stats::setNames(unique(as.character(updatedEngagements$color)),unique(as.character(updatedEngagements$weapon)))
 
 
     myPlot=ggplot(data=updatedEngagements) +

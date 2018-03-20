@@ -18,8 +18,8 @@ export_scenario_to_ASI(scenario, outFileName, drawEngagements = TRUE,
 
 \item{persistPosition}{(boolean) if true, will persist all platforms until the end of the file (and gray out the title at their last position) (default=false)}
 
-\item{prefFile}{(default=NA) specify name of preference file (must be in same folder as the ASI output when you open it in simdis)}
+\item{prefFile}{(default=NA) specify name of preference file (must be in same folder as the ASI output when you open it in SIMDIS)}
 }
 \description{
-
+Exports a scenario to a .asi file, which can be opened with SIMDIS for event visualization
 }

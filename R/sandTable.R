@@ -34,6 +34,37 @@
 #' @name sandTable
 #'
 
-
-
 NULL
+
+
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("time",
+                                                        "lat",
+                                                        "lon",
+                                                        "alt",
+                                                        "truthID",
+                                                        "kill",
+                                                        "maxR",
+                                                        "minR",
+                                                        "target",
+                                                        "targetLat",
+                                                        "targetLon",
+                                                        "simdisPlatformNum",
+                                                        "slantRange",
+                                                        "sourceLat",
+                                                        "sourceLon",
+                                                        "weapon",
+                                                        ".out",
+                                                        ".",
+                                                        "engNum",
+                                                        "color",
+                                                        "V2",
+                                                        "V3",
+                                                        "V4",
+                                                        "V5",
+                                                        "V6",
+                                                        "V7",
+                                                        "basePlot",
+                                                        "heading",
+                                                        "targetTruthID",
+                                                        "platformName"
+))

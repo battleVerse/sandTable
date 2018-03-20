@@ -28,9 +28,9 @@ platformInfo display info for all platforms. Requires the following columns:
  \item{platformIcon: (string) name of platform icon (must choose from valid SIMDIS options)}
  \item{platformType: (string) type of platform (e.g., ship) (must choose from valid SIMDIS options)}
  \item{trackColor: (string) color of the track (must be a valid SIMDIS choice)}
- }
+ }}
 
- @param persistPosition (boolean) if true, will persist all platforms until this time (and gray out the title at their last position) (default=false)}
+\item{persistPosition}{(boolean) if true, will persist all platforms until this time (and gray out the title at their last position) (default=false)}
 
 \item{drawSensorTracks}{(default=FALSE) if the scenario includes sensorData, the tracks will be drawn in the asi file (it's okay if drawSensorTracks=TRUE but no sensorData exists in the scenario)}
 }

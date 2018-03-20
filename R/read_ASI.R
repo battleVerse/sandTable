@@ -39,7 +39,7 @@ read_ASI = function(ASIFilePath, timeFormat = "%j %Y %H:%M:%OS",timeZone=NULL) {
     angleUnits=lines[grepl(pattern="(DegreeAngles)", lines)] %>% #pull out ONLY lines that match the pattern
         paste0(collapse='\n') %>% #force this text into a file-like structure
         textConnection() %>% #send it through a text connection
-        read.csv(sep="",header=FALSE) %>% #pretend it's a csv
+        utils::read.csv(sep="",header=FALSE) %>% #pretend it's a csv
         select(V2) #pull out the unit setting
 
 
@@ -59,10 +59,10 @@ read_ASI = function(ASIFilePath, timeFormat = "%j %Y %H:%M:%OS",timeZone=NULL) {
     if (length(refYear)>0){ #if we found anything
 
         refYear = refYear %>% #pull out ONLY lines that match the pattern
-        paste0(collapse='\n') %>% #force this text into a file-like structure
-        textConnection() %>% #send it through a text connection
-        read.csv(sep="",header=FALSE) %>% #pretend it's a csv
-        select(V2) #pull out the unit setting
+            paste0(collapse='\n') %>% #force this text into a file-like structure
+            textConnection() %>% #send it through a text connection
+            utils::read.csv(sep="",header=FALSE) %>% #pretend it's a csv
+            select(V2) #pull out the unit setting
 
         cat(sprintf("Reference Year: %s\n",refYear))
 
@@ -80,7 +80,7 @@ read_ASI = function(ASIFilePath, timeFormat = "%j %Y %H:%M:%OS",timeZone=NULL) {
     platNames=lines[grepl(pattern="(PlatformName)", lines)] %>% #pull out ONLY lines that match the pattern
         paste0(collapse='\n') %>% #force this text into a file-like structure
         textConnection() %>% #send it through a text connection
-        read.csv(sep="",header=FALSE) %>% #pretend it's a csv
+        utils::read.csv(sep="",header=FALSE) %>% #pretend it's a csv
         select(2,3) %>% #drop the first column
         rename(simdisPlatformNum=V2, platformName=V3)
 
@@ -105,7 +105,7 @@ read_ASI = function(ASIFilePath, timeFormat = "%j %Y %H:%M:%OS",timeZone=NULL) {
         tmpPlatData=platPositionLines[startIndex:stopIndex] %>% #pull out ONLY lines that match the pattern
             paste0(collapse='\n') %>% #force this text into a file-like structure
             textConnection() %>% #send it through a text connection
-            read.csv(sep="",header=FALSE)
+            utils::read.csv(sep="",header=FALSE)
 
         platPositionData=bind_rows(platPositionData, tmpPlatData)
 
@@ -116,17 +116,17 @@ read_ASI = function(ASIFilePath, timeFormat = "%j %Y %H:%M:%OS",timeZone=NULL) {
     ### clean up the data we just read in ###
     if (ncol(platPositionData)==6) { #this means there is no heading data
 
-    platformData=platPositionData %>%
-        rename(simdisPlatformNum = V2,
-               time=V3,
-               lat=V4,
-               lon=V5,
-               alt=V6) %>%
-        select(simdisPlatformNum, time, lat, lon, alt) %>%
-        mutate(lat=lat*angleConversion,
-               lon=lon*angleConversion,
-               time=as.numeric(as.POSIXct(time, format=timeFormat, tz=timeZone, origin=refYear))) %>%
-        na.omit()
+        platformData=platPositionData %>%
+            rename(simdisPlatformNum = V2,
+                   time=V3,
+                   lat=V4,
+                   lon=V5,
+                   alt=V6) %>%
+            select(simdisPlatformNum, time, lat, lon, alt) %>%
+            mutate(lat=lat*angleConversion,
+                   lon=lon*angleConversion,
+                   time=as.numeric(as.POSIXct(time, format=timeFormat, tz=timeZone, origin=refYear))) %>%
+            stats::na.omit()
 
     } else {
         platformData=platPositionData %>%
@@ -141,7 +141,7 @@ read_ASI = function(ASIFilePath, timeFormat = "%j %Y %H:%M:%OS",timeZone=NULL) {
                    lon=lon*angleConversion,
                    heading=heading*angleConversion,
                    time=as.numeric(as.POSIXct(time, format=timeFormat, tz=timeZone, origin=refYear))) %>%
-            na.omit()
+            stats::na.omit()
     }
 
 
