@@ -3,7 +3,6 @@
 \docType{package}
 \name{sandTable}
 \alias{sandTable}
-\alias{sandTable-package}
 \title{sandTable: A package for analyzing weapon engagements.  A part of the battleVerse}
 \description{
 Hello and welcome to sandTable, a part the battleVerse!  sandTable is a package designed to help you analyze weapon engagements and to import/export SIMDIS format data.

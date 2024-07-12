@@ -4,13 +4,22 @@
 \alias{export_scenario_to_ASI}
 \title{Writes your scenario as an ASI file}
 \usage{
-export_scenario_to_ASI(scenario, outFileName, drawEngagements = TRUE,
-  drawSensorTracks = FALSE, persistPosition = FALSE, prefFile = NA)
+export_scenario_to_ASI(
+  scenario,
+  outFileName,
+  referenceYear = 1970,
+  drawEngagements = TRUE,
+  drawSensorTracks = FALSE,
+  persistPosition = FALSE,
+  prefFile = NA
+)
 }
 \arguments{
 \item{scenario}{must have targetTruth and/or ownShipTruth as well as platformInfo}
 
 \item{outFileName}{output file name (including path if desired) for the ASI. Optional to include '.asi' in the output}
+
+\item{referenceYear}{(default=1970) SIMDIS uses this to interpret ambiguous dates. If you're using POSIX, then 1970 is correct}
 
 \item{drawEngagements}{(default=TRUE) if the scenario includes engagementData, the engagements will be drawn in the asi file (it's okay if drawEngagements=TRUE but no engagementData exists in the scenario)}
 

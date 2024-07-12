@@ -161,7 +161,7 @@ sandTable_interface = function() {
             if (is.list(values$scenario)){
                 checkTruth=is.data.frame(values$scenario$targetTruth)
                 checkOwnShip=is.data.frame(values$scenario$ownShipTruth)
-                checkEngagement=is.data.frame(values$scenario$sensorData)
+                checkEngagement=is.data.frame(values$scenario$engagementData)
 
                 changesSaved=identical(eval(parse(text=input$scenario)),values$scenario)
 

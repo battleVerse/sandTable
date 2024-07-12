@@ -4,13 +4,18 @@
 \alias{create_ASI_platforms}
 \title{Create an ASI platform}
 \usage{
-create_ASI_platforms(header, scenario, persistPosition = FALSE,
-  drawSensorTracks = FALSE)
+create_ASI_platforms(
+  header,
+  scenario,
+  persistPosition = FALSE,
+  drawSensorTracks = FALSE
+)
 }
 \arguments{
 \item{header}{output from create_ASI_header (can be piped into this function)}
 
 \item{scenario}{must have targetTruth and/or ownShipTruth as well as platformInfo:
+
 
 platformData (targetTruth and/or ownShipTruth) position data on all the platforms. This is the Nautilus truth format. Requires the following columns:
 \itemize{

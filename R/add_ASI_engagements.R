@@ -4,15 +4,15 @@
 #'
 #' @param asiText output from create_ASI_platforms (can be piped into this function)
 #' @param scenario must have targetTruth and/or ownShipTruth as well as engagementData:
-#'
+#' @param drawSensorTracks (default=FALSE) needed for proper PlatformID numbering
 #'
 #' @return text
 #'
 #'
 #'
 
-add_ASI_engagements = function(asiText, scenario){
-
+add_ASI_engagements = function(asiText, scenario,drawSensorTracks=FALSE){
+    #drawSensorTracks is required so that add_ASI_engagements can start counting from the right number
 
 
     #combine the two (this is okay even if one is NA!)

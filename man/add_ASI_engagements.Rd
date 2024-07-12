@@ -4,12 +4,14 @@
 \alias{add_ASI_engagements}
 \title{Add engagements to ASI file}
 \usage{
-add_ASI_engagements(asiText, scenario)
+add_ASI_engagements(asiText, scenario, drawSensorTracks = FALSE)
 }
 \arguments{
 \item{asiText}{output from create_ASI_platforms (can be piped into this function)}
 
 \item{scenario}{must have targetTruth and/or ownShipTruth as well as engagementData:}
+
+\item{drawSensorTracks}{(default=FALSE) needed for proper PlatformID numbering}
 }
 \value{
 text

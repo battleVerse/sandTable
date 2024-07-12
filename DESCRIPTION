@@ -1,7 +1,7 @@
 Package: sandTable
 Type: Package
 Title: Data visualization and data import/export for the battleVerse
-Version: 0.3
+Version: 0.3.1
 Date: 2018-03-19
 Authors@R: c(
   person('Benjamin','Ashwell',email='bashwell@ida.org',role=c('cre','aut')),
@@ -22,6 +22,6 @@ Imports:
     purrrlyr,
     rhandsontable,
     scenarioMaker (>= 0.2)
-RoxygenNote: 6.0.1
+RoxygenNote: 7.2.3
 Encoding: UTF-8
 LazyData: true
